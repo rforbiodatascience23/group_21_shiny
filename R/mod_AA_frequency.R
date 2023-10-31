@@ -12,7 +12,7 @@ mod_AA_frequency_ui <- function(id){
   tagList(
     shiny::sidebarLayout(
       shiny::sidebarPanel(
-        shiny::textInput("text", label = h3("Peptide sequence"), value = "Enter peptide sequence..."),
+        shiny::textInput(inputId = ns("peptide"), label = h3("Peptide sequence"), placeholder = "Enter peptide sequence..."),
         hr()
       ),
       shiny::mainPanel(
@@ -32,10 +32,10 @@ mod_AA_frequency_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     output$frequency <- renderPlot({
-      if(input$text == ""){
+      if(input$peptide == ""){
         NULL
       } else{
-        input$text |>
+        input$peptide |>
           gene2protein::aa_content() +
           ggplot2::theme(legend.position = "none")
       }
