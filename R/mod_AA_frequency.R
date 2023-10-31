@@ -12,7 +12,9 @@ mod_AA_frequency_ui <- function(id){
   tagList(
     sidebarLayout(
       sidebarPanel(
-        "peptide_sequence"
+        textInput("text", label = h3("Peptide sequence"), value = "Enter text..."),
+        hr(),
+        fluidRow(column(3, verbatimTextOutput("value")))
       ),
       mainPanel(
         "plot"
@@ -27,7 +29,7 @@ mod_AA_frequency_ui <- function(id){
 mod_AA_frequency_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-
+    output$value <- renderPrint({ input$text })
   })
 }
 
