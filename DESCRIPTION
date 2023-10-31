@@ -1,7 +1,21 @@
 Package: gene2protein
 Title: PKG_TITLE
 Version: 0.0.0.9000
-Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
+Authors@R: c(person(given = "Tobias", family = "Christiansen", role = c("aut", "cre"), email = "s215105@dtu.dk"), person(given = "Othilia",family = "Schrøder",
+           role = "aut",
+           email = "s223163@dtu.dk"), 
+    person(given = "Emma Qingjie",
+           family = "Andersen",
+           role = "aut",
+           email = "s215090@dtu.dk"), 
+    person(given = "Joanna Sela",
+           family = "Rasmussen",
+           role = "aut",
+           email = "s215092@student.dtu.dk"), 
+    person(given = "Buna Ingrid",
+           family = "Adsersen",
+           role = "aut",
+           email = "s215085@dtu.dk"))
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
