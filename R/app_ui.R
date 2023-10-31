@@ -12,9 +12,12 @@ app_ui <- function(request) {
     fluidPage(
       h1("gene2protein"),
       tabsetPanel(
+        #Spacing
         tabPanel(title = "DNA to peptide",
                  "DNA_to_peptide"),
-        tabPanel(title = "Amino acid frequency",
+
+        #Spacing
+        tabPanel(title = "Amino Acid Frequency",
                  mod_AA_frequency_ui("AA_frequency_1")),
         textInput("text", label = h3("Text input"),
                   value = "Enter text..."),
