@@ -12,7 +12,7 @@ mod_AA_frequency_ui <- function(id){
   tagList(
     sidebarLayout(
       sidebarPanel(
-        textInput("text", label = h3("Peptide sequence"), value = "Enter text..."),
+        textInput("text", label = h3("Peptide sequence"), value = "Enter peptide sequence..."),
         hr(),
         fluidRow(column(3, verbatimTextOutput("value")))
       ),
