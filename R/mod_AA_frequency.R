@@ -25,7 +25,8 @@ mod_AA_frequency_ui <- function(id){
 }
 
 #' AA_frequency Server Functions
-#'
+#' @importFrom ggplot2 theme
+#' @import gene2protein
 #' @noRd
 mod_AA_frequency_server <- function(id){
   moduleServer( id, function(input, output, session){
