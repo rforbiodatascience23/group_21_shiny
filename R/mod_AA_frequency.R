@@ -29,20 +29,19 @@ mod_AA_frequency_ui <- function(id){
     )
   )
 }
-
 #' AA_frequency Server Functions
 #'
 #'
 #' @noRd
-mod_AA_frequency_server <- function(id){
-  moduleServer( id, function(input, output, session){
+mod_AA_frequency_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
     output$frequency <- renderPlot({
-      if(input$peptide  == ""){
-        NULL
-      } else{
-        input$peptide  |>
-          gene2protein::aa_content() +
+      if (input$peptide == "") {
+        return(NULL)
+      } else {
+        input$peptide |>
+          yourpackage::function_five() +
           ggplot2::theme(legend.position = "none")
       }
     })

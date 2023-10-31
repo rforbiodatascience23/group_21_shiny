@@ -14,7 +14,7 @@ app_ui <- function(request) {
       tabsetPanel(
         #Spacing
         tabPanel(title = "DNA to peptide",
-                 "DNA_to_peptide"),
+                 mod_DNA_to_peptide_ui("DNA_to_peptide_1")),
 
         #Spacing
         tabPanel(title = "Amino Acid Frequency",
