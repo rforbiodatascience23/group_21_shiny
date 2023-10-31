@@ -11,10 +11,22 @@ mod_DNA_to_peptide_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
-      column(8, "DNA_sequence"),
-      column(4, "random_dna_length", "generate_dna_button")
+      column(8, uiOutput(ns("DNA"))),
+      column(4, numericInput(
+        inputId = ns("dna_length"),
+        value = 6000,
+        min = 3,
+        max = 100000,
+        step = 3,
+        label = "Random DNA length"
+      ),
+      actionButton(
+        inputId = ns("generate_dna"),
+        label = "Generate random DNA", style = "margin-top: 18px;"
+      ))
     ),
-    "peptide_sequence"
+    shiny::verbatimTextOutput(outputId = ns("peptide")) |>
+      shiny::tagAppendAttributes(style = "white-space: pre-wrap;")
   )
 }
 
@@ -24,7 +36,9 @@ mod_DNA_to_peptide_ui <- function(id){
 mod_DNA_to_peptide_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-
+    output$value <- renderPrint({input$num})
+    output$value <- renderPrint({input$text})
+    output$value <- renderPrint({input$action})
   })
 }
 
