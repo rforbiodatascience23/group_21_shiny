@@ -18,11 +18,7 @@ app_ui <- function(request) {
 
         #Spacing
         tabPanel(title = "Amino Acid Frequency",
-                 mod_AA_frequency_ui("AA_frequency_1")),
-        textInput("text", label = h3("Text input"),
-                  value = "Enter text..."),
-        hr(),
-        fluidRow(column(3, verbatimTextOutput("value")))
+                 mod_AA_frequency_ui("AA_frequency_1"))
       )
     )
   )
