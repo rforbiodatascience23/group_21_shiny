@@ -15,7 +15,11 @@ app_ui <- function(request) {
         tabPanel(title = "DNA to peptide",
                  "DNA_to_peptide"),
         tabPanel(title = "AA frequency",
-                 mod_AA_frequency_ui("AA_frequency_1"))
+                 mod_AA_frequency_ui("AA_frequency_1")),
+        textInput("text", label = h3("Text input"),
+                  value = "Enter text..."),
+        hr(),
+        fluidRow(column(3, verbatimTextOutput("value")))
       )
     )
   )
