@@ -13,8 +13,7 @@ mod_AA_frequency_ui <- function(id){
     sidebarLayout(
       sidebarPanel(
         textInput("text", label = h3("Peptide sequence"), value = "Enter peptide sequence..."),
-        hr(),
-        fluidRow(column(3, verbatimTextOutput("value")))
+        hr()
       ),
       mainPanel(
         plotOutput(
@@ -31,7 +30,15 @@ mod_AA_frequency_ui <- function(id){
 mod_AA_frequency_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    output$value <- renderPrint({ input$text })
+    output$frequency <- renderPlot({
+      if(input$text == ""){
+        NULL
+      } else{
+        input$text |>
+          gene2protein::aa_content() +
+          ggplot2::theme(legend.position = "none")
+      }
+    })
   })
 }
 
