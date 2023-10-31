@@ -10,13 +10,13 @@
 mod_AA_frequency_ui <- function(id){
   ns <- NS(id)
   tagList(
-    sidebarLayout(
-      sidebarPanel(
-        textInput("text", label = h3("Peptide sequence"), value = "Enter peptide sequence..."),
+    shiny::sidebarLayout(
+      shiny::sidebarPanel(
+        shiny::textInput("text", label = h3("Peptide sequence"), value = "Enter peptide sequence..."),
         hr()
       ),
-      mainPanel(
-        plotOutput(
+      shiny::mainPanel(
+        shiny::plotOutput(
           outputId = ns("frequency")
         )
       )
