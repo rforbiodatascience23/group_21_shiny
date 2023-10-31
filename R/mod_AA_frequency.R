@@ -17,7 +17,9 @@ mod_AA_frequency_ui <- function(id){
         fluidRow(column(3, verbatimTextOutput("value")))
       ),
       mainPanel(
-        "plot"
+        plotOutput(
+          outputId = ns("frequency")
+        )
       )
     )
   )
