@@ -36,9 +36,42 @@ mod_DNA_to_peptide_ui <- function(id){
 mod_DNA_to_peptide_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    output$value <- renderPrint({input$num})
-    output$value <- renderPrint({input$text})
-    output$value <- renderPrint({input$action})
+    dna <- reactiveVal()
+
+    # text input
+    output$DNA <- renderUI({
+      textAreaInput(
+        inputId = ns("DNA"),
+        label = "DNA sequence",
+        placeholder = "Insert DNA sequence",
+        value = dna(),
+        height = 100,
+        width = 600
+      )
+    })
+
+    # Action button
+    observeEvent(input$generate_dna, {
+      dna(
+        gene2protein::random_peptide(input$dna_length)
+      )
+    })
+
+    # from DNA to peptide
+    output$peptide <- renderText({
+      # Ensure input is not NULL and is longer than 2 characters
+      if(is.null(input$DNA)){
+        NULL
+      } else if(nchar(input$DNA) < 3){
+        NULL
+      } else{
+        input$DNA |>
+          toupper() |>
+          gene2protein::convert_t_to_u() |>
+          gene2protein::codons() |>
+          gene2protein::codon_to_aa()
+      }
+    })
   })
 }
 
