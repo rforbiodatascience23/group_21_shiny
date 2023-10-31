@@ -13,9 +13,9 @@ app_ui <- function(request) {
       h1("gene2protein"),
       tabsetPanel(
         tabPanel(title = "DNA to peptide",
-                 "DNA to peptide"),
+                 "DNA_to_peptide"),
         tabPanel(title = "AA frequency",
-                 "AA frequency")
+                 "AA_frequency")
       )
     )
   )

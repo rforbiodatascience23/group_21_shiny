@@ -1,4 +1,4 @@
-#' DNA to peptide UI Function
+#' DNA_to_peptide UI Function
 #'
 #' @description A shiny Module.
 #'
@@ -7,17 +7,17 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
-mod_DNA to peptide_ui <- function(id){
+mod_DNA_to_peptide_ui <- function(id){
   ns <- NS(id)
   tagList(
  
   )
 }
     
-#' DNA to peptide Server Functions
+#' DNA_to_peptide Server Functions
 #'
 #' @noRd 
-mod_DNA to peptide_server <- function(id){
+mod_DNA_to_peptide_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
  
@@ -25,7 +25,7 @@ mod_DNA to peptide_server <- function(id){
 }
     
 ## To be copied in the UI
-# mod_DNA to peptide_ui("DNA to peptide_1")
+# mod_DNA_to_peptide_ui("DNA_to_peptide_1")
     
 ## To be copied in the server
-# mod_DNA to peptide_server("DNA to peptide_1")
+# mod_DNA_to_peptide_server("DNA_to_peptide_1")
