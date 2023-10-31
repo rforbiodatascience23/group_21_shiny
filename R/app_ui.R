@@ -15,7 +15,7 @@ app_ui <- function(request) {
         tabPanel(title = "DNA to peptide",
                  "DNA_to_peptide"),
         tabPanel(title = "AA frequency",
-                 "AA_frequency")
+                 mod_AA_frequency_ui("AA_frequency_1"))
       )
     )
   )
