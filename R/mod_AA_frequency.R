@@ -41,7 +41,7 @@ mod_AA_frequency_server <- function(id) {
         return(NULL)
       } else {
         input$peptide |>
-          yourpackage::function_five() +
+          gene2protein::aa_content() +
           ggplot2::theme(legend.position = "none")
       }
     })
