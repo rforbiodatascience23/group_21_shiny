@@ -20,8 +20,8 @@ attachment::att_amend_desc()
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "module1", with_test = FALSE) # Name of the module
-golem::add_module(name = "module2", with_test = FALSE) # Name of the module
+golem::add_module(name = "DNA to peptide", with_test = FALSE) # Name of the module
+golem::add_module(name = "AA frequency", with_test = FALSE) # Name of the module
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*

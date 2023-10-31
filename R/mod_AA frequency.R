@@ -1,4 +1,4 @@
-#' module2 UI Function
+#' AA frequency UI Function
 #'
 #' @description A shiny Module.
 #'
@@ -7,17 +7,17 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
-mod_module2_ui <- function(id){
+mod_AA frequency_ui <- function(id){
   ns <- NS(id)
   tagList(
  
   )
 }
     
-#' module2 Server Functions
+#' AA frequency Server Functions
 #'
 #' @noRd 
-mod_module2_server <- function(id){
+mod_AA frequency_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
  
@@ -25,7 +25,7 @@ mod_module2_server <- function(id){
 }
     
 ## To be copied in the UI
-# mod_module2_ui("module2_1")
+# mod_AA frequency_ui("AA frequency_1")
     
 ## To be copied in the server
-# mod_module2_server("module2_1")
+# mod_AA frequency_server("AA frequency_1")

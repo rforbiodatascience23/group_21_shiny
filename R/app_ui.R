@@ -12,10 +12,10 @@ app_ui <- function(request) {
     fluidPage(
       h1("gene2protein"),
       tabsetPanel(
-        tabPanel(title = "panel1",
-                 "module1"),
-        tabPanel(title = "panel2",
-                 "module2")
+        tabPanel(title = "DNA to peptide",
+                 "DNA to peptide"),
+        tabPanel(title = "AA frequency",
+                 "AA frequency")
       )
     )
   )
