@@ -21,7 +21,7 @@ mod_DNA_to_peptide_ui <- function(id){
         label = "Random DNA length"
       ),
       shiny::actionButton(
-        inputId = ns("generate_dna"),
+        inputId = "generate_dna",
         label = "Generate random DNA", style = "margin-top: 18px;"
       ))
     ),
@@ -52,7 +52,7 @@ mod_DNA_to_peptide_server <- function(id){
     })
 
     # Action button
-    observeEvent(input$generate_dna, {
+    observeEvent(input$generate_dna, function() {
       dna(
         gene2protein::random_peptide(input$dna_length)
       )
