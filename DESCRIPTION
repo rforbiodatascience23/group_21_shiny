@@ -1,17 +1,13 @@
-Package: gene2protein
-Title: gene2protein
+Package: dna2protein
+Title: PKG_TITLE
 Version: 0.0.0.9000
-Authors@R: c(
-    person("Joanna Sela", "Rasmussen", , "s215105@dtu.dk", role = c("aut", "cre")),
-    person("Othilia", "Schrøder", , "s223163@dtu.dk", role = "aut"),
-    person("Emma Qingjie", "Andersen", , "s215090@dtu.dk", role = "aut"),
-    person("Tobias", "Christiansen", , "s215092@student.dtu.dk", role = "aut"),
-    person("Buna Ingrid", "Adsersen", , "s215085@dtu.dk", role = "aut")
-  )
-Description: Central dogma
+Authors@R: 
+    person("AUTHOR_FIRST", "AUTHOR_LAST", , "AUTHOR@MAIL.COM", role = c("cre", "aut"))
+Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
+    gene2protein,
     ggplot2,
     golem (>= 0.4.1),
     shiny (>= 1.7.5)

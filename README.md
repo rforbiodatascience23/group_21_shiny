@@ -1,16 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# gene2protein
+# dna2protein
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of gene2protein is to …
+The goal of dna2protein is to …
 
 ## Installation
 
-You can install the development version of gene2protein from
+You can install the development version of dna2protein from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -23,7 +23,7 @@ devtools::install_github("rforbiodatascience23/group_21_shiny")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(gene2protein)
+library(dna2protein)
 ## basic example code
 ```
 
