@@ -36,8 +36,8 @@ mod_DNA_to_peptide_ui <- function(id){
 #' @noRd
 mod_DNA_to_peptide_server <- function(id){
   moduleServer( id, function(input, output, session){
-    ns <- session$ns
     dna <- reactiveVal()
+    ns <- session$ns
 
     # text input
     output$DNA <- renderUI({
