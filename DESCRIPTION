@@ -1,4 +1,4 @@
-Package: dna2peptide
+Package: gene2protein
 Title: gene2protein
 Version: 0.0.0.9000
 Authors@R: c(
