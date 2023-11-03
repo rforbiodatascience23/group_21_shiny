@@ -52,7 +52,7 @@ mod_DNA_to_peptide_server <- function(id){
     })
 
     # Action button
-    observeEvent(input$generate_dna, function() {
+    observeEvent(input$generate_dna, {
       dna(
         gene2protein::random_peptide(input$dna_length)
       )
